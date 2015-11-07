@@ -1,0 +1,8 @@
+  
+  <h4>{{jiraissues.filterOrProjectName}}</h4> 
+
+<table>
+  <tr ng-repeat="item in jiraissues.rows" ng-bind-html-unsafe="item.html">
+  <td ng-bind-html="item.html">{{item.html}}</td><td style="padding-left:25px;">{{item.count}}</td>
+  </tr>
+</table>
