@@ -1,0 +1,8 @@
+  
+  <h4>{{sonarqubemetrics.name}}</h4> 
+
+<table>
+  <tr ng-repeat="item in sonarqubemetrics.mmsr" ng-bind-html-unsafe="item.html">
+  <td ng-bind-html="item.html">{{item.key}}</td><td style="padding-left:25px;">{{item.value}}</td>
+  </tr>
+</table>

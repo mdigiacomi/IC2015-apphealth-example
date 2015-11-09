@@ -25,7 +25,7 @@
 
 angular.module('sample', [
   'adf', 'adf.structures.base', 'adf.widget.iframe',
-  'adf.widget.randommsg', 'adf.widget.weather', 'adf.widget.rssfeed', 'adf.widget.jiraissues',
+  'adf.widget.randommsg', 'adf.widget.weather', 'adf.widget.rssfeed', 'adf.widget.jiraissues', 'adf.widget.sonarqube',
   'LocalStorageModule',  'ngRoute'
 ])
 .config(function(dashboardProvider, $routeProvider, localStorageServiceProvider){

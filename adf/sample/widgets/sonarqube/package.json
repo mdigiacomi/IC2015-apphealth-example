@@ -1,0 +1,15 @@
+{
+  "name": "adf-sonarqube-widget",
+  "version": "0.0.1",
+  "keywords": [
+    "dashboard",
+    "widget",
+    "adf",
+    "adf-widget",
+    "iframe"
+  ],
+  "description": "SonarQube Widget for the angular-dashboard-framework",
+  "dependencies": {},
+  "devDependencies": {
+  }
+}
