@@ -7,8 +7,10 @@
 
 #Steps to get Running using docker 
 1. Clone
-2. cd applicationhealth-example
-3. ./runme.sh
+2. cd applicationhealth-example/adf
+3. bower install
+4. cd ..
+5. ./runme.sh
 
 #When done example:
 
