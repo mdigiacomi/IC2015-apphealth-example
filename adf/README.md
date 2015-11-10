@@ -21,6 +21,6 @@
 ./runme.sh
 
 
-Steps to get Running using NGINX/Apache
+#Steps to get Running using NGINX/Apache
 1. Copy adf folder to Web Server root. 
 2. Goto http://url-to-location-root/sample
