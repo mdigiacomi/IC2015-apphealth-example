@@ -1,0 +1,7 @@
+<table>
+  <tbody ng-repeat="item in elasticissuemetrics.hits.hits">
+  <tr>
+    <td>Log Message:</td><td style="padding-left:25px;">{{item._source.Message}}</td>
+  </tr>
+  </tbody>
+</table>

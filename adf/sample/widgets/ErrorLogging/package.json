@@ -1,0 +1,15 @@
+{
+  "name": "adf-elasticissues-widget",
+  "version": "0.0.1",
+  "keywords": [
+    "dashboard",
+    "widget",
+    "adf",
+    "adf-widget",
+    "iframe"
+  ],
+  "description": "Shows Last 5 Application Logs for the angular-dashboard-framework",
+  "dependencies": {},
+  "devDependencies": {
+  }
+}
