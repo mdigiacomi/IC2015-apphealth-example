@@ -22,7 +22,7 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
           }
         },
         edit: {
-          templateUrl: '{widgetsPath}/SonarQube/src/sonarqubesedit.html'
+          templateUrl: '{widgetsPath}/SonarQube/src/sonarqubeedit.html'
         }
       });
   }).service('sonarqubeService', function($q, $http){
@@ -31,7 +31,7 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
         var deferred = $q.defer();
         $http({
           method: 'GET',
-          url: sonarserver + "/api/resources/?metrics=ncloc,coverage,sqale_index&resource=" + jiraproject
+          url: sonarserver + "/api/resources/?metrics=ncloc,coverage,sqale_index&resource=" + sonarproject
         }).success(function(data){
               deferred.resolve(data);
           })
