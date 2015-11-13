@@ -15,7 +15,7 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
             else
             {
               config.sonarproject = "project-10000";
-              config.sonarserver = "https://jira.digitaladrenalin.net";
+              config.sonarserver = "https://jenkins.digitaladrenalin.net:9000";
             }
 
             return sonarqubeService.get(config.sonarproject, config.sonarserver);
