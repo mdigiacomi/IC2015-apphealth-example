@@ -18,7 +18,7 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
               config.sonarserver = "https://jira.digitaladrenalin.net";
             }
 
-            return jiraissuesService.get(config.sonarproject, config.sonarserver);
+            return sonarqubeService.get(config.sonarproject, config.sonarserver);
           }
         },
         edit: {
