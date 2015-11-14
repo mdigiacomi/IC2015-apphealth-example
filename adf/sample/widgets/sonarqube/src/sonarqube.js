@@ -6,7 +6,7 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
       .widget('sonarqube', {
         title: 'sonarqube',
         description: 'Display Issue Status Metrics for SonarQube',
-        templateUrl: '{widgetsPath}/SonarQube/src/sonarqubeview.html',
+        templateUrl: '{widgetsPath}/SonarQube/src/sqview.html',
         controller: 'sonarqubeCtrl',
         reload: true,
         resolve: {
@@ -22,7 +22,7 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
           }
         },
         edit: {
-          templateUrl: '{widgetsPath}/SonarQube/src/sonarqubeedit.html'
+          templateUrl: '{widgetsPath}/SonarQube/src/sqedit.html'
         }
       });
   }).service('sonarqubeService', function($q, $http){
