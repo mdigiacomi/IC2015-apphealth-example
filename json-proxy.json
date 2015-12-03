@@ -1,0 +1,13 @@
+{
+  "server": {
+    "port": 8080
+  },
+  "proxy": {
+    "forward": {
+      "/jira/(.*)": "https://jira.digitaladrenalin.net/$1",
+      "/source/(.*)": "https://source.digitaladrenalin.net/$1",
+      "/mattermost/(.*)":"https://chat.digitaladrenalin.net/$1",
+      "/elastic/(.*)":"https://elk.digitaladrenalin.net/$1"
+    }
+  }
+}
