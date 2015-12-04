@@ -6,12 +6,12 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
       .widget('sonarqube', {
         title: 'sonarqube',
         description: 'Display Issue Status Metrics for SonarQube',
-        templateUrl: '{widgetsPath}/SonarQube/src/sqview.html',
+        templateUrl: '{widgetsPath}/sonarqube/src/sqview.html',
         controller: 'sonarqubeCtrl',
         reload: true,
         resolve: {
           data: function(sonarqubeService, config){
-            if (config.jiraproject != null && config.jiraserver != null){ }
+            if (config.sonarserver != null && config.sonarproject != null){ }
             else
             {
               config.sonarproject = "project-10000";
@@ -22,7 +22,7 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
           }
         },
         edit: {
-          templateUrl: '{widgetsPath}/SonarQube/src/sqedit.html'
+          templateUrl: '{widgetsPath}/sonarqube/src/sqedit.html'
         }
       });
   }).service('sonarqubeService', function($q, $http){
