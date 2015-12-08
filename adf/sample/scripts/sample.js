@@ -28,7 +28,7 @@ angular.module('sample', [
   'adf.widget.randommsg', 'adf.widget.weather', 'adf.widget.rssfeed', 'adf.widget.jiraissues', 'adf.widget.sonarqube', 'adf.widget.elasticissue', 'adf.widget.mattermost',
   'LocalStorageModule',  'ngRoute'
 ])
-.config(function(dashboardProvider, $routeProvider, localStorageServiceProvider){
+.config(function(dashboardProvider, $routeProvider, localStorageServiceProvider, $httpProvider){
   dashboardProvider.widgetsPath('widgets/');
   localStorageServiceProvider.setPrefix('adf');
 
@@ -39,6 +39,12 @@ angular.module('sample', [
   .otherwise({
     redirectTo: '/'
   });
+  
+  //Enable cross domain calls
+  $httpProvider.defaults.useXDomain = true;
+
+  //Remove the header used to identify ajax call  that would prevent CORS from working
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
 })
 .controller('navigationCtrl', function($scope, $location){

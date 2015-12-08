@@ -11,11 +11,11 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
         reload: true,
         resolve: {
           data: function(sonarqubeService, config){
-            if (config.jiraproject != null && config.jiraserver != null){ }
+            if (config.sonarproject != null && config.sonarserver != null){ }
             else
             {
-              config.sonarproject = "project-10000";
-              config.sonarserver = "https://jenkins.digitaladrenalin.net:9000";
+              config.sonarproject = "EC-Sharepoint:ETSUpdater";
+              config.sonarserver = "http://sonarqube.otpp.com";
             }
 
             return sonarqubeService.get(config.sonarproject, config.sonarserver);
@@ -31,7 +31,7 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
         var deferred = $q.defer();
         $http({
           method: 'GET',
-          url: sonarserver + "/api/resources/?metrics=ncloc,coverage,sqale_index&resource=" + sonarproject
+          url: sonarserver + "api/resources/?metrics=ncloc,coverage,sqale_index&resource=" + sonarproject
         }).success(function(data){
               deferred.resolve(data);
           })
