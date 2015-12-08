@@ -6,12 +6,16 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
       .widget('sonarqube', {
         title: 'sonarqube',
         description: 'Display Issue Status Metrics for SonarQube',
-        templateUrl: '{widgetsPath}/SonarQube/src/sqview.html',
+        templateUrl: '{widgetsPath}/sonarqube/src/sqview.html',
         controller: 'sonarqubeCtrl',
         reload: true,
         resolve: {
           data: function(sonarqubeService, config){
+<<<<<<< HEAD
             if (config.sonarproject != null && config.sonarserver != null){ }
+=======
+            if (config.sonarserver != null && config.sonarproject != null){ }
+>>>>>>> 28e32b7869204feaeba47c26c29f72ff2f89703a
             else
             {
               config.sonarproject = "EC-Sharepoint:ETSUpdater";
@@ -22,7 +26,7 @@ angular.module('adf.widget.sonarqube', ['adf.provider', 'ngSanitize'])
           }
         },
         edit: {
-          templateUrl: '{widgetsPath}/SonarQube/src/sqedit.html'
+          templateUrl: '{widgetsPath}/sonarqube/src/sqedit.html'
         }
       });
   }).service('sonarqubeService', function($q, $http){

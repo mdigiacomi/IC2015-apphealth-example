@@ -11,14 +11,14 @@ angular.module('adf.widget.mattermost', ['adf.provider', 'ngSanitize'])
         reload: true,
         resolve: {
           data: function(mattermostService, config){
-            if (config.jiraproject != null && config.jiraserver != null){ }
+            if (config.mattermostchat != null && config.mattermosturl != null){ }
             else
             {
-              config.jiraproject = "project-10000";
-              config.jiraserver = "https://jira.digitaladrenalin.net";
+              config.mattermostchat = "gpxucn1bp3ra3ci7k5szte3eow";
+              config.mattermosturl = "https://chat.digitaladrenalin.net";
             }
 
-            return mattermostService.get(config.jiraproject, config.jiraserver);
+            return mattermostService.get(config.mattermostchat, config.mattermosturl);
           }
         },
         edit: {
@@ -27,11 +27,11 @@ angular.module('adf.widget.mattermost', ['adf.provider', 'ngSanitize'])
       });
   }).service('mattermostService', function($q, $http){
     return {
-      get: function(jiraproject, jiraserver){
+      get: function(mattermostchat, mattermosturl){
         var deferred = $q.defer();
         $http({
           method: 'GET',
-          url: "https://chat.digitaladrenalin.net/api/v1/channels/gpxucn1bp3ra3ci7k5szte3eow/posts/0/60?_=1447463294945"
+          url: mattermosturl + "/api/v1/channels/" + mattermostchat + "/posts/0/60"
         }).success(function(data){
               deferred.resolve(data);
           })
